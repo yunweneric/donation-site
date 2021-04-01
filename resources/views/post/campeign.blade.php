@@ -6,8 +6,8 @@
     <div class="flex justify-center">
         <div class="w-8/12 bg-white p-6 rounded-lg">
             <button
-                class="group relative w-2/12 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                <a href="{{ route('addcampeign') }}">Add Campeign</a>
+                class="group relative w-3/12 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white primary-bg hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <a href="{{ route('addcampeign') }}">Create Campeign</a>
             </button>
 
             <h1 class="font-bold my-4 mt-6 text-blue-500">ALL CAMPEIGNS</h1>
@@ -115,12 +115,13 @@
                                                                     method="post">
                                                                     @csrf
                                                                     <button
-                                                                        class="group relative w-2/12 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                                                                        class="group relative w-2/12 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white primary-bg hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                                                                         type="submit">
                                                                         <i class="fa fa-eye" aria-hidden="true"></i>
                                                                     </button>
                                                                 </form>
-                                                            </span> <span>
+                                                            </span>
+                                                             {{-- <span>
 
                                                                 <form action="{{ route('paynow', $post->amount) }}"
                                                                     method="post">
@@ -131,7 +132,7 @@
                                                                         <i class="fa fa-usd" aria-hidden="true"></i>
                                                                     </button>
                                                                 </form>
-                                                            </span>
+                                                            </span> --}}
 
                                                         </div>
                                                     </td>

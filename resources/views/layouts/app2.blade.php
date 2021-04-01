@@ -9,10 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
 </head>
 
-<body class="">
+<body class="body" id="body">
     @include('layouts.navigation')
 
 
@@ -37,8 +39,8 @@
                 </li>
                 <li>
                     {{-- <form action="{{ route('logout') }}" method="post" class="inline p-3"> --}}
-                        @csrf
-                        {{-- <button class="" type="submit">logout</button> --}}
+                    @csrf
+                    {{-- <button class="" type="submit">logout</button> --}}
                     </form>
 
                 </li>

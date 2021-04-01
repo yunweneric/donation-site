@@ -39,7 +39,7 @@ Route::post('/campeign', [CampeignController::class, 'store']);
 
 
 Route::post('/viewcampeign/{id}/', [CampeignController::class, 'viewcampeign'])->name('viewcampeign');
-Route::post('/pay/{amount}/', [CampeignController::class, 'pay'])->name('paynow');
+Route::post('/paynow', [CampeignController::class, 'pay'])->name('paynow');
 
 
 

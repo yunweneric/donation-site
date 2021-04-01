@@ -34,8 +34,8 @@ class CampeignController extends Controller
         return view('post.viewcampeign', ['posts'=>$user]);
     }
 
-    public function pay($amount){
-        // dd($amount);
+    public function pay(Request $request){
+        // dd($request);
        $myPayment = new PayUnit(
     "f41b310f22617387d0c01f9f461b91dbf5bb54bd",
     "47c6ba11-3d5c-46af-ba29-79199c35fca0",
@@ -49,7 +49,7 @@ class CampeignController extends Controller
     "Yunweneric"
   );
 
-          $myPayment->makePayment("$amount");
+          $myPayment->makePayment("$request->amount");
        
     }
 }

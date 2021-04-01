@@ -1,13 +1,14 @@
 @extends('layouts.app2')
 @section('title')
-    Invoice
+    Donation
 @endsection
 @section('content')
     <div class="flex justify-center">
         <div class="w-8/12 bg-white p-6 rounded-lg">
             <button
-                class="group relative w-2/12 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                <a href="{{ route('addposts') }}">Add Donation</a>
+                class="group relative w-4/12 flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white primary-bg hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                {{-- <a href="{{ route('addposts') }}">Add Donation</a> --}}
+                <a href="{{ route('campeign') }}">Donate for a campeign</a>
             </button>
 
             <h1 class="font-bold my-4 mt-6 text-blue-500">ALL DONATIONS</h1>
@@ -40,7 +41,7 @@
                                                 </th>
                                                 <th scope="col"
                                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                                    Details
+                                                    Donated
                                                 </th>
 
                                             </tr>
@@ -97,7 +98,8 @@
 
 
                                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                        {{ $post->body }} </td>
+                                                        {{ $post->created_at->diffForHumans() }}
+                                                    </td>
 
                                                 </tr>
                                             @endforeach
